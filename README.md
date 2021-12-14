@@ -1,3 +1,14 @@
 # zk-melody
 
-https://vryzhkova.github.io/zk-melody/
+# https://vryzhkova.github.io/zk-melody/
+
+# zk-melody - учебный проект
+### Выполнила проект: Рыжкова Виктория
+
+## Технологии:
+- JavaScript
+- библиотека jQuery
+
+### Что сделали:
+- подсвечивание этажей
+- переключение этажей по клику вверх-вниз 
