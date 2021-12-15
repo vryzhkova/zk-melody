@@ -2,7 +2,10 @@ $(document).ready(function () {
     let currentFloor = 2;
     let counterUp = $('.counter-up');
     const counterDown = $('.counter-down');
-    floorPath = $('.home-image path');
+    const floorPath = $('.home-image path');
+    const modal = $('.modal');
+    const modalClose = $('.modal-close-button');
+    const viewFlatsButton = $('.view-flats')
 
     // функция при наведении мышкой на этаж
     floorPath.on('mouseover', function () {
@@ -10,6 +13,12 @@ $(document).ready(function () {
         currentFloor = $(this).attr('data-floor');
         $('.counter').text(currentFloor);
     });
+
+    floorPath.on('click', toggleModal);
+
+    modalClose.on('click', toggleModal);
+
+    viewFlatsButton.on('click', toggleModal);
 
     counterUp.on('click', function () {  // отслеживаем клик по кнопке вверх
         if (currentFloor < 18) {    
@@ -34,4 +43,7 @@ $(document).ready(function () {
         $(`[data-floor=${usCurrentFloor}]`).toggleClass('current-floor')
         }   
     }); 
+    function toggleModal() {
+        modal.toggleClass('is-open');
+    }
 });
